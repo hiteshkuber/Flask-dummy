@@ -10,6 +10,10 @@ def index():
 def pup_name(name):
     return render_template("puppy.html", name=name)
 
+@app.route("/puppy")
+def try_url():
+    return render_template("homepage.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
 
