@@ -19,5 +19,9 @@ My Accomplishments:
 </h1>
 """
 
+@app.route("/profiles/<name>")
+def getName(name: str):
+    return f"<h1>{name}</h1>"
+
 if __name__ == "__main__":
     app.run()
