@@ -2,4 +2,18 @@
 
 {{ block content }}
 
+<p>Heyy there!! This is your report</p>
+<br>
+<p>Username provided was {{username}}</p>
+{% if is_pass %}
+    <p>Congratulations!!! Your username passed all of our checks :D</p>
+{% else %}
+    <p>With great displeasure, we would like to inform that your user name failed a few checks of ours</p>
+    <ul>
+        {% for check in checks %}
+            <li>{{check}}</li>
+        {% endfor %}
+    </ul>
+    <p>Please take a look and retry. Thank you.</p>
+{% endif %}
 {{ endblock }}
