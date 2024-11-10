@@ -5,7 +5,11 @@
     <h1>Welcome to sign up page!</h1>
     <p>Fill out the form. Notice we dont save any info :D</p>
     <form action="{{ url_for('thank_you') }}">
-        
+        <label for="First">First name:</label>
+        <input type="text" name="First" placeholder="First name">
+        <label for="Last">Last name:</label>
+        <input type="text" name="Last" placeholder="Last name">
+        <input type="submit" value="Submit form">
     </form>
 </div>
 {{ endblock }}
