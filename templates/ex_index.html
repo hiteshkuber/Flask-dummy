@@ -1,0 +1,23 @@
+{% extends='ex_base.html' %}
+
+{{ block content }}
+
+<p>Welcome to Puppy user name checker :D</p>
+<br>
+<p>Let's see if your username is secure!</p>
+<br>
+<p>Please fill out the the given form securing the following conditions:</p>
+<br><br>
+<ul>
+    {% for condition in conditions %}
+        <li>{{reason}}</li>
+    {% endfor %}
+</ul>
+
+<form action="{{ url_for(report) }}">
+    <label for="username">Username: </label>
+    <input type="text" name="username" placeholder="Enter username">
+    <input type="submit" value="Get report">
+</form>
+
+{{ endblock }}
