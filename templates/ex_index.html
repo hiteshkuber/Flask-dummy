@@ -1,6 +1,6 @@
-{% extends='ex_base.html' %}
+{% extends 'ex_base.html' %}
 
-{{ block content }}
+{% block content %}
 
 <p>Welcome to Puppy user name checker :D</p>
 <br>
@@ -10,7 +10,7 @@
 <br><br>
 <ul>
     {% for condition in conditions %}
-        <li>{{reason}}</li>
+        <li>{{condition}}</li>
     {% endfor %}
 </ul>
 
@@ -20,4 +20,4 @@
     <input type="submit" value="Get report">
 </form>
 
-{{ endblock }}
+{% endblock %}
