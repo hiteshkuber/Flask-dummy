@@ -1,0 +1,11 @@
+{{ extends "init.html"}}
+
+{{ block content }}
+<div class="jumbotron">
+    <h1>Welcome to sign up page!</h1>
+    <p>Fill out the form. Notice we dont save any info :D</p>
+    <form action="{{ url_for('thank_you') }}">
+        
+    </form>
+</div>
+{{ endblock }}
